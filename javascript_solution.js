@@ -4,6 +4,7 @@ let result=document.getElementById("response");
 let gender;
 let age;
 let country_codes;
+const regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
 
 getDogPic();
 submit_btn.addEventListener("click",()=>{
@@ -21,7 +22,7 @@ function print(){
     result.innerHTML+="<br>Age: "+ age.age;
     result.innerHTML+="<br>Country: ";
     country_codes.map(function (code){
-        result.innerHTML+=code.country_id+" ";
+        result.innerHTML+=regionNames.of(code.country_id)+" ";
     });
 }
 async function getGender(name, getAge){
