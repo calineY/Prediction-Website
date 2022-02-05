@@ -1,16 +1,48 @@
 body {
-	background-color: rgb(222, 120, 231); /* For browsers that do not support gradients */
-	/*background-image: linear-gradient(to bottom right, rgb(163, 12, 163), rgb(97, 10, 10));*/
+	height: 100vh;
+
+	background-color: rgb(136, 51, 136);
+	background: linear-gradient(to bottom right, rgb(105, 14, 105), rgb(117, 28, 28));
+	background-size: 150% 121%;
 }
 .title {
 	font-size: 4em;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
-	color: rgb(210, 255, 173);
+	color: white;
 	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 .image {
 	width: 300px;
 	height: 300px;
 	border-radius: 10px;
+}
+.frame {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.submit {
+	background-color: rgb(69, 20, 124);
+	font-size: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: 1px solid white;
+	color: white;
+	margin-top: 10px;
+}
+.submit:hover {
+	background-color: rgba(104, 56, 160, 0.767);
+	cursor: pointer;
+}
+label {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+}
+.name-input {
+	height: 20px;
+	padding-top: 5px;
+	border-radius: 5px;
 }
