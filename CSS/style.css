@@ -1,8 +1,8 @@
 body {
 	height: 100vh;
 
-	background-color: rgb(136, 51, 136);
-	background: linear-gradient(to bottom right, rgb(105, 14, 105), rgb(153, 35, 35));
+	background-color: rgb(136, 51, 136); /*background if gradient is not supported*/
+	background: linear-gradient(to bottom right, rgb(105, 14, 105), rgb(153, 35, 35)); /*gradient background*/
 	background-size: 150% 169%;
 }
 .title {
@@ -57,6 +57,7 @@ label {
 	font-family: Arial, Helvetica, sans-serif;
 }
 @media only screen and (max-width: 640px) {
+	/*on small screens make title smaller and align elements in a column*/
 	.title {
 		font-size: 2em;
 	}
