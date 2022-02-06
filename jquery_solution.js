@@ -22,16 +22,21 @@ submit_btn.on("click",()=>{
         result.text("Please enter a name first.");
     }
     else{
-        result.html("Processing...");
+        result.html("&#10024; Predicting &#10024;");
         getGender(name,getAge);
+    }
+});
+input.keyup(function(event) {
+    if (event.key === 'Enter') {
+        submit_btn.click();
     }
 });
 function print(){
     result.html("Gender: "+ gender);
-    result.append("<br>Age: "+ age.age);
+    result.append("<br>Age: "+ age);
     result.append("<br>Country: ");
-    country_codes.map(function (code){
-        result.append(regionNames.of(code.country_id)+" ");
+    country_codes.map(function (country){
+        result.append(regionNames.of(country.country_id)+" ");
     });
 }
 function getGender(name,getAge){
@@ -50,7 +55,7 @@ function getAge(name,getNationality){
         type: 'GET',
         url: 'https://api.agify.io/?name='+name,
         success: function(name_age){
-            age=name_age;
+            age=name_age.age;
             getNationality(name);
         } 
     });

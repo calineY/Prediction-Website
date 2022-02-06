@@ -2,7 +2,7 @@ body {
 	height: 100vh;
 
 	background-color: rgb(136, 51, 136);
-	background: linear-gradient(to bottom right, rgb(105, 14, 105), rgb(117, 18, 18));
+	background: linear-gradient(to bottom right, rgb(105, 14, 105), rgb(153, 35, 35));
 	background-size: 150% 169%;
 }
 .title {
